@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+  <script src="https://kit.fontawesome.com/942391f47d.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Netflix</title>
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg net-bg-color">
+    <a class="navbar-brand" href="#"><img src="/assets/netflix_logo.png" alt="Netflix-logo" height="40"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll"
+      aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon "></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
+        <li class="nav-item active">
+          <a class="nav-link text-white" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white font-weight-bold" href="#">Tv Shows<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link text-white" href="#" aria-expanded="false">
+            Movies
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Recently Added</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">My Last</a>
+        </li>
+      </ul>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="bi bi-search text-white font-weight-bold mr-2 " viewBox="0 0 16 16">
+        <path
+          d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+      </svg>
+      <form class="d-flex">
+        <input class="form-control mr-2 net-bg-color border-dark border-0 text-white bg active" type="search"
+          placeholder="Kids" size="1" aria-label="Search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+          class="bi bi-search text-white font-weight-bold mt-2 ml-n3 " viewBox="0 0 16 16">
+          <path
+            d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
+        </svg>
+        <div class="collapse navbar-collapse" id="navbar-list-4">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="assets/avatar.png" width="30" height="30" class="" />
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Dashboard</a>
+                <a class="dropdown-item" href="#">Edit Profile</a>
+                <a class="dropdown-item" href="#">Log Out</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </form>
+    </div>
+  </nav>
+
+  <div class="container bg-backOffice  ">
+
+    <h1 class=" mb-5 pt-3 text-center text-center  ">Back Office</h1>
+
+
+    <form class="form"">
+      <div class=" form-group d-flex justify-content-center align-self-center">
+      <label for="name" class="w-70">Movie: </label>
+      <input type="text" class="form-control " id="name" placeholder="Please Enter Movie's Name">
+  </div>
+
+  <div class="form-group d-flex justify-content-center align-self-center">
+    <label for="description">Description:</label>
+    <textarea class="form-control" id="description" rows="3" placeholder="Please Movie's Description"></textarea>
+  </div>
+
+
+  <div class="form-group d-flex justify-content-center align-self-center">
+    <label for="category">Category:</label>
+    <input type="text" class="form-control " id="category" placeholder="Movie's Category">
+  </div>
+
+
+  <div class="form-group d-flex justify-content-center align-self-center">
+    <label for="imageUrl">Image:</label>
+    <input type="text" class="form-control " id="imageUrl" placeholder="Image Url">
+
+  </div>
+
+
+  <div>
+    <button class=" btn-color btn" type="submit">Submit</button>
+
+
+  </div>
+
+  </form>
+
+
+  </div>
+
+  </div>
+
+
+
+
+
+
+
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+  </script>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+  </script> -->
+
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
