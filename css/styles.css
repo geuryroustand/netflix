@@ -1,0 +1,62 @@
+body {
+  background-color: #141414;
+  color: white;
+}
+
+.episodes {
+  position: relative;
+}
+
+.p {
+  position: absolute;
+  bottom: 0;
+  font-size: 16px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  padding-right: 20px;
+  text-align: center;
+  padding: 1px;
+}
+
+.netflix {
+  position: absolute;
+  top: 0;
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.right {
+  margin-left: 5px !important;
+  overflow: auto !important;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.net-bg-color {
+  background-color: #141414;
+}
+body {
+  background-color: #141414;
+}
+.buttondrop1 {
+  width: 75px;
+  height: 27px;
+}
+
+.ba {
+  width: 80px;
+  height: 30px;
+  background-color: transparent;
+  text-align: center;
+  border: 1px solid white;
+}
+
+i {
+  padding-left: 5px;
+}
