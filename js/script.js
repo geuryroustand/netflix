@@ -1,5 +1,6 @@
 const url = `https://striveschool-api.herokuapp.com/api/movies/`;
-
+const key =
+  'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRjNWZkZWIzNTgxNzAwMTVjMjI3MDkiLCJpYXQiOjE2MjUyMTEwOTEsImV4cCI6MTYyNjQyMDY5MX0.VZNTSW2hSDU7qvG3bE4F-4_h7UfBioSpmz5Wl1imD-4';
 const form = document.querySelector('.form');
 
 console.log(form);
@@ -26,6 +27,7 @@ window.onload = async () => {
 const submitData = async () => {
   form.addEventListener('submit', async e => {
     e.preventDefault();
+
     const subtObject = {
       name: document.getElementById('name').value,
       description: document.getElementById('description').value,
@@ -33,24 +35,22 @@ const submitData = async () => {
       imageUrl: document.getElementById('imageUrl').value,
     };
 
+    console.log(subtObject);
     try {
       const response = await fetch(url, {
         method: 'POST',
         body: JSON.stringify(subtObject),
         headers: {
           'Content-Type': 'application/json',
-          Authorization:
-            'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRjNWZkZWIzNTgxNzAwMTVjMjI3MDkiLCJpYXQiOjE2MjUyMTEwOTEsImV4cCI6MTYyNjQyMDY5MX0.VZNTSW2hSDU7qvG3bE4F-4_h7UfBioSpmz5Wl1imD-4',
+          Authorization: key,
         },
       });
-
-      console.log(response);
+      // console.log(response);
     } catch (error) {
       console.log(error);
     }
   });
 };
-
 // const subMitData = async event => {
 //   event.preventDefault();
 
