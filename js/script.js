@@ -18,12 +18,6 @@ console.log(form);
 //   return data;
 // };
 
-window.onload = async () => {
-  // const data = await getData(url);
-  // subMitData();
-  submitData();
-};
-
 const submitData = async () => {
   form.addEventListener('submit', async e => {
     e.preventDefault();
@@ -51,6 +45,70 @@ const submitData = async () => {
     }
   });
 };
+
+const entPoint = new URLSearchParams(window.location.search).get('movie');
+
+const upgradeMovies = async () => {
+  const response = await fetch(url + entPoint, {
+    method: 'PUT',
+    headers: {
+      authorization: key,
+      'Content-Type': 'application/json',
+    },
+  });
+
+  const data = await response.json();
+
+  name: document.getElementById('name').value = data.name;
+  description: document.getElementById('description').value = data.description;
+  category: document.getElementById('category').value = data.category;
+  imageUrl: document.getElementById('imageUrl').value = data.imageUrl;
+
+  if (entPoint) {
+    document.querySelector('.btn-color').innerHTML = ' Upgrade';
+    document.querySelector('.delete').classList.remove('d-none');
+  }
+};
+
+// const btnDelele = document.querySelector('delete');
+// btnDelele.classList.remove('d-none');
+
+const deleteMovie = async () => {
+  const response = await fetch(url + entPoint, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: key,
+    },
+  });
+
+  const confirmed = confirm('Are you sure that you want to delete the movie');
+  if (confirmed) {
+    showAlert();
+  }
+};
+
+window.onload = async () => {
+  // const data = await getData(url);
+  // subMitData();
+  submitData();
+
+  upgradeMovies();
+  // deleteMovie();
+};
+
+const showAlert = mes => {
+  const form = document.querySelector('form');
+  const hmtl = `
+  <div class="alert alert-danger" role="alert">
+  A simple danger alert—check it out!
+  </div>
+  
+  `;
+
+  form.appendChild(hmtl);
+};
+
 // const subMitData = async event => {
 //   event.preventDefault();
 

@@ -5,44 +5,25 @@ const comodyMovies = document.querySelector('.movies-comedy');
 
 const loveMovies = document.querySelector('.movies-love');
 
-const entPoint = ['comedy', 'loveOne'];
-console.log(entPoint);
-
+// const entPoint = ['comedy', 'loveOne'];
+// console.log(entPoint);
+{
+  /* <p class="p"> New Episodes </p> */
+}
 const displayMovies = movies => {
-  loveMovies.innerHTML = '';
+  // loveMovies.innerHTML = '';
   comodyMovies.innerHTML = '';
   // <p class="netflix">Netflix</p>
   movies.forEach(movie => {
     const html = `
     <a href="./backOffice.html?movie=${movie._id}">
     <div class=" episodes   col   px-1  ">
-      <img class="mb-2   mb-md-2   mb-sm-0  img-fluid w-100" src="${movie.imageUrl}" alt="">
-      <p class="p"> New Episodes </p>
+    <img class="mb-2   mb-md-2   mb-sm-0  img-fluid w-100" src="${movie.imageUrl}" alt="">
+    
     
     </div>
-  </a>
-
-    `;
-
-    comodyMovies.insertAdjacentHTML('afterbegin', html);
-    getMoviesLoveOne.insertAdjacentHTML('afterbegin', html);
-  });
-};
-
-const displayMovieLove = movies => {
-  loveMovies.innerHTML = '';
-
-  // <p class="netflix">Netflix</p>
-  movies.forEach(movie => {
-    const html = `
-    <a href="./backOffice.html?movie=${movie._id}">
-    <div class=" episodes   col   px-1  ">
-      <img class="mb-2   mb-md-2   mb-sm-0  img-fluid w-100" src="${movie.imageUrl}" alt="">
-      <p class="p"> New Episodes </p>
+    </a>
     
-    </div>
-  </a>
-
     `;
 
     comodyMovies.insertAdjacentHTML('afterbegin', html);
@@ -66,6 +47,27 @@ const getMoviesComedy = async () => {
   console.log(data);
 };
 
+const displayMoviesLove = movies => {
+  // loveMovies.innerHTML = '';
+  loveMovies.innerHTML = '';
+  // <p class="netflix">Netflix</p>
+  movies.forEach(movie => {
+    const html = `
+    <a href="./backOffice.html?movie=${movie._id}">
+    <div class=" episodes   col   px-1  ">
+      <img class="mb-2   mb-md-2   mb-sm-0  img-fluid w-100" src="${movie.imageUrl}" alt="">
+      
+      
+      </div>
+      </a>
+      
+      `;
+
+    loveMovies.insertAdjacentHTML('afterbegin', html);
+    // getMoviesLoveOne.insertAdjacentHTML('afterbegin', html);
+  });
+};
+
 const getMoviesLoveOne = async () => {
   const response = await fetch(
     ` https://striveschool-api.herokuapp.com/api/movies/loveOne`,
@@ -78,8 +80,8 @@ const getMoviesLoveOne = async () => {
   );
 
   const data = await response.json();
-  displayMovies(data);
-  console.log(data);
+  displayMoviesLove(data);
+  // console.log(data);
 };
 
 window.onload = async () => {
